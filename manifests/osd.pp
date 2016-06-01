@@ -185,12 +185,12 @@ define ceph::osd (
       require => File["${osd_data}/sysvinit"],
     }
 
-    # Rsyslog configuration
-    ::rsyslog::imfile { "ceph-osd-${osd_id}":
-      file_name        => "/var/log/ceph/ceph-osd.${osd_id}.log",
-      file_tag         => "ceph-osd-${osd_id}",
-      file_facility    => 'local3',
-      polling_interval => 3,
-    }
+    ## Rsyslog configuration
+    #::rsyslog::imfile { "ceph-osd-${osd_id}":
+    #  file_name        => "/var/log/ceph/ceph-osd.${osd_id}.log",
+    #  file_tag         => "ceph-osd-${osd_id}",
+    #  file_facility    => 'local3',
+    #  polling_interval => 3,
+    #}
   }
 }

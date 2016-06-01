@@ -73,17 +73,17 @@ define ceph::mon (
   }
 
   # Rsyslog configuration
-  ::rsyslog::imfile { "ceph-mon-${id}":
-    file_name        => "/var/log/ceph/ceph-mon.${id}.log",
-    file_tag         => "ceph-mon-${id}",
-    file_facility    => 'local3',
-    polling_interval => 3,
-  }
+  #::rsyslog::imfile { "ceph-mon-${id}":
+  #  file_name        => "/var/log/ceph/ceph-mon.${id}.log",
+  #  file_tag         => "ceph-mon-${id}",
+  #  file_facility    => 'local3',
+  #  polling_interval => 3,
+  #}
 
-  ::rsyslog::imfile { 'ceph-cluster':
-    file_name        => '/var/log/ceph/ceph.log',
-    file_tag         => 'ceph-cluster',
-    file_facility    => 'local3',
-    polling_interval => 3,
-  }
+  #::rsyslog::imfile { 'ceph-cluster':
+  #  file_name        => '/var/log/ceph/ceph.log',
+  #  file_tag         => 'ceph-cluster',
+  #  file_facility    => 'local3',
+  #  polling_interval => 3,
+  #}
 }
